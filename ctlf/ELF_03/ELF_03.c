@@ -22,7 +22,7 @@ int check_pw(char *arg1, char *arg2, char *arg3) {
 	return 1;
 }
 
-int main (int argc, char **argv) {
+int main(int argc, char **argv) {
 	if (argc != 2) {
 		puts("You should give one argument.\n");
 		return 1;
