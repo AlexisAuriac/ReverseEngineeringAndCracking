@@ -1,7 +1,13 @@
 # ELF_04
 
-password:
-- 16 characters long
-- sum of characters is 1664, 1664 / 16 = 104 -> 'h'
+## What it does
 
-password is hhhhhhhhhhhhhhhh
+Checks if the password is 16 characters long.
+
+Checks the sum of the characters is equal to 1664
+
+## Solution
+
+1664 / 16 = 104 = 'h'
+
+One possible password is "hhhhhhhhhhhhhhhh"

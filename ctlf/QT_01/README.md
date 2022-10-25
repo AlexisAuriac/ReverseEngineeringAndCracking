@@ -4,7 +4,7 @@ decompiled with cutter
 
 found flag in dbg.Notepad::save()
 
-```
+```c++
 // WARNING: Variable defined which should be unmapped: var_8h
 // WARNING: [rz-ghidra] Type QFile of variable file has size 0
 // WARNING: [rz-ghidra] Type QTextStream of variable out has size 0
@@ -63,7 +63,7 @@ void Notepad::save()(int64_t arg1)
         QString::~QString()((int64_t)&var_48h);
         if (cVar1 != '\0') {
             uVar3 = *(undefined8 *)(*(int64_t *)(arg1 + 0x30) + 0x90);
-            QString::QString(char const*)((int64_t)&var_48h, "BFS[youpwndnotepad]"); <---- HERE
+            QString::QString(char const*)((int64_t)&var_48h, "BFS[youpwndnotepad]"); // <---- HERE
             QTextEdit::setText(QString const&)(uVar3, &var_48h);
             QString::~QString()((int64_t)&var_48h);
         }

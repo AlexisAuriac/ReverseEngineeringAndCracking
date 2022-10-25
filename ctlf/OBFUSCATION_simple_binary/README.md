@@ -7,13 +7,13 @@ from the subject: "Note: Any password used by DOOM's henchmen can't be very long
 with alphabet: 
 ```abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&()*+,-./:;<>=?@[]\\^_`{}|~```
 
-we get around 800,000 possible passwords
+we get almost 800,000 possible passwords
 
-## Generate passwords
+### Generate passwords
 
-had this program lying around
+Used this program to generate all passwords.
 
-```
+```rust
 fn n_permutations2<T>(l: &Vec<T>, n: usize) -> Vec<Vec<T>>
 where
     T: Copy,
@@ -49,7 +49,7 @@ fn main() {
 }
 ```
 
-put result into file
+put result into file (\~1800 ms)
 
 ```
 aaa
@@ -58,19 +58,19 @@ aac
 ...
 ```
 
-## Testing passwords
+### Testing passwords
 
-when testing passwords, 3 possible cases:
+when testing passwords, there are 3 possible cases:
 - 1: segfault (most likely result)
-- 2: program exits with 0 and prints something (about 1/1000)
-- 3: programs freezes (about 1/5000)
+- 2: program exits with 0 and prints something (around 1/1000)
+- 3: programs freezes (around 1/5000)
 
-In case 2 the message usually contains unprintable characters and/or is unreadable
+In case 2 the message usually contains unprintable characters and/or is unreadable.
 
-Theory: when the right password is entered the program will print a readable message
+Theory: when the right password is entered the program will print a readable message.
 
-bash one liner used to test:
-```
+bash oneliner used to test:
+```bash
 for i in $(cat passwords.txt); do echo $i; res=$(./simple_binary $i); if [[ $? -eq 0 ]]; then echo '=================' >> logs.txt; echo $i >> logs.txt; echo $res >> logs.txt; fi; ; done
 ```
 
@@ -78,10 +78,15 @@ case 1: ignored
 case 2: message written to logs.txt, to be reviewed manually
 case 3: script stopped, passwords.txt is updated manually to remove everything up to where it froze (included)
 
-## Result
+### Result
 
-Took about 2 days
-tested almost 300,000 passwords
+It took 2 days, tested around 250,000 passwords.
 
-real password: z0b (lol)
+password: "z0b" (lol)
 flag: BFS{5iMp1e_r1gH7? g00d J0b!}
+
+## Brute force v2
+
+See ./solve/src/main.rs for the code.
+
+Finds the flag in 2 hours.

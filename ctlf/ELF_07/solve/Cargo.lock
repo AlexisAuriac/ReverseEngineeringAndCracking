@@ -47,13 +47,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "solve"
-version = "0.1.0"
-dependencies = [
- "sha2",
-]
-
-[[package]]
 name = "generic-array"
 version = "0.14.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -78,6 +71,13 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest",
+]
+
+[[package]]
+name = "solve"
+version = "0.1.0"
+dependencies = [
+ "sha2",
 ]
 
 [[package]]

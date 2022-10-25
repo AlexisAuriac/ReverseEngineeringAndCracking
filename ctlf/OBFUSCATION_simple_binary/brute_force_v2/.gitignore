@@ -1,0 +1,6 @@
+# Cargo
+target
+
+# Brute force cache files
+logs.txt
+pwd_id_cache.txt

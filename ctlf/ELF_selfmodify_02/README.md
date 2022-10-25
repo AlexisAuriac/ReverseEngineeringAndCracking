@@ -4,7 +4,7 @@
 
 changes the protection of a part of the program so that it can be written onto (mprotect), this part contains 2 functions with a lot of invalid instructions
 
-xors this section with another section, patching all errors
+xors this section with 0x42, patching all errors
 
 checks pwd is lowercase only
 

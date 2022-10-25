@@ -5,24 +5,26 @@
 error while loading shared libraries: libssl.so.1.1
 -> https://stackoverflow.com/a/72633324
 
-## All checks done by the program
+## What it does
 
 takes a password as argument
 
-password is 20 bytes long
+checks password is 20 bytes long
 
-password[0:3] == password[9:12]
+checks password[0:3] == password[9:12]
 
-all characters of password must be lowercase letters
+password must be lowercase letters only
 
 hashed = custom_hash(password) // same as ELF_06
 hashed == "K0!0!0!0(4&1\"1#0%6*0"
 
 sha256(password[12:20]) == 8531d8960e7f2447508d80e80d48fd96730cf89a9987268971d858fc49cba71a
 
-sha256(password[12:20]) == 2053dbbf6ec7135c4e994d3464c478db6f48d3ca21052c8f44915edc96e02c39
+sha256(password[3:9]) == 2053dbbf6ec7135c4e994d3464c478db6f48d3ca21052c8f44915edc96e02c39
 
 ## Solution
+
+See solve/src/main.rs for implementation.
 
 ### Checksums / sha256
 
@@ -33,6 +35,12 @@ solution: stripped
 
 do the same for password[3:9] (around 6750)
 solution: static
+
+Algo complexity for each character:
+```
+nb_checks(0) = 26
+nb_checks(i) = 26 * valid_pwd(nb_checks(i))
+```
 
 ### repeated parts
 

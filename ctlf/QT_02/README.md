@@ -8,7 +8,7 @@ Found Calculator::check_result()
 
 If the result of an operation is 4242421337.0, the flag will appear.
 
-```
+```c++
 void Calculator::check_result()(int64_t arg1)
 {
     undefined8 uVar1;
@@ -24,7 +24,7 @@ void Calculator::check_result()(int64_t arg1)
     canary = *(int64_t *)(in_FS_OFFSET + 0x28);
     result = 0;
     checksum = 0xfcde3659;
-    if (*(double *)(arg1 + 0x38) == 4242421337.0) {
+    if (*(double *)(arg1 + 0x38) == 4242421337.0) { // <----- Check is here
         QFlags<QMessageBox::StandardButton>::QFlags(QMessageBox::StandardButton)((int64_t)&var_40h, 0x400);
         QString::QString(char const*)((int64_t)&var_30h, " GG your treasure is now on the screen");
         QString::QString(char const*)((int64_t)&var_38h, "Warning");
