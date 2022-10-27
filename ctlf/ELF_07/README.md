@@ -16,11 +16,11 @@ checks password[0:3] == password[9:12]
 password must be lowercase letters only
 
 hashed = custom_hash(password) // same as ELF_06
-hashed == "K0!0!0!0(4&1\"1#0%6*0"
+hashed == ```K0!0!0!0(4&1\"1#0%6*0```
 
-sha256(password[12:20]) == 8531d8960e7f2447508d80e80d48fd96730cf89a9987268971d858fc49cba71a
+sha256(password[12:20]) == ```8531d8960e7f2447508d80e80d48fd96730cf89a9987268971d858fc49cba71a```
 
-sha256(password[3:9]) == 2053dbbf6ec7135c4e994d3464c478db6f48d3ca21052c8f44915edc96e02c39
+sha256(password[3:9]) == ```2053dbbf6ec7135c4e994d3464c478db6f48d3ca21052c8f44915edc96e02c39```
 
 ## Solution
 

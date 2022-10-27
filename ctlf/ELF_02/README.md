@@ -3,7 +3,7 @@
 See ELF_02.c for a approximation of the original code.
 
 Cutter decompiled:
-```
+```c
 /* jsdec pseudo code output */
 /* /home/alexis/Documents/tech5_2/reverse_engineering_and_cracking/ctlf/ELF_02/ELF_02 @ 0x1149 */
 #include <stdint.h>
@@ -62,6 +62,6 @@ label_4:
 }
 ```
 
-The flag is the string 'password424242' but every character was decremented, 'p' becomes 'o', 's' becomes 'r', etc...
+The flag is the string **password424242** but every character was decremented, 'p' becomes 'o', 's' becomes 'r', etc...
 
-flag: 'o`rrvnqc313131'
+flag: ```o`rrvnqc313131```

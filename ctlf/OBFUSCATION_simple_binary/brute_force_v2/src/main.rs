@@ -7,7 +7,6 @@ use std::time::{Duration, Instant};
 use wait_timeout::ChildExt;
 
 const ALPHA: &str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-// const ALPHA: &str = "bz019a";
 
 const PROGRAM: &str = "../simple_binary";
 const PROC_TIMEOUT: Duration = Duration::from_secs(1);

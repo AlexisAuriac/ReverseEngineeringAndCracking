@@ -8,11 +8,11 @@ Search for something that looks like this:
 ```
 
 Get the second key:
-```
+```bash
 curl https://keyvalidator.reverse.blackfoot.io/key/B42brPAq1KnMB3KVPfI27wtR
 ```
 
 Get the flag:
-```
+```bash
 curl https://keyvalidator.reverse.blackfoot.io/validate/B42brPAq1KnMB3KVPfI27wtR/b57ab317235d05d9615ee4053357bc700ad7e12e0d3b51ddbd94de04dd796ab5
 ```

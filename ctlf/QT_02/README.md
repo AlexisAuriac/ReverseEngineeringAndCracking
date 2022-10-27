@@ -4,7 +4,7 @@ Opened QtCalculator with cutter.
 
 Decompiled (ghidra)
 
-Found Calculator::check_result()
+Found ```Calculator::check_result()```.
 
 If the result of an operation is 4242421337.0, the flag will appear.
 

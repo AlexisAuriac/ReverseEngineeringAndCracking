@@ -74,16 +74,16 @@ bash oneliner used to test:
 for i in $(cat passwords.txt); do echo $i; res=$(./simple_binary $i); if [[ $? -eq 0 ]]; then echo '=================' >> logs.txt; echo $i >> logs.txt; echo $res >> logs.txt; fi; ; done
 ```
 
-case 1: ignored
-case 2: message written to logs.txt, to be reviewed manually
+case 1: ignored\
+case 2: message written to logs.txt, to be reviewed manually\
 case 3: script stopped, passwords.txt is updated manually to remove everything up to where it froze (included)
 
 ### Result
 
 It took 2 days, tested around 250,000 passwords.
 
-password: "z0b" (lol)
-flag: BFS{5iMp1e_r1gH7? g00d J0b!}
+password: "z0b" (lol)\
+flag: ```BFS{5iMp1e_r1gH7? g00d J0b!}```
 
 ## Brute force v2
 

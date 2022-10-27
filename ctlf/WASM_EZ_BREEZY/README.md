@@ -6,7 +6,7 @@ go to **Debugger** and open index.wasm.
 
 flag is in clear a the end of the file.
 
-flag: ez_br33zy!
+flag: ```ez_br33zy!```
 
 ```
 (module

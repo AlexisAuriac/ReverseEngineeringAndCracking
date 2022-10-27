@@ -3,9 +3,9 @@
 ## What it does
 
 How the binary works:
-- 1: Take a password as argument
-- 2: hash password
-- 3: compare to hardcoded hashed password
+- Take a password as argument
+- hash password
+- compare to hardcoded hashed password
 
 In the code we found the hashed password: "K+N.R.X+R1U-M,X%Q+U" (19 bytes)
 

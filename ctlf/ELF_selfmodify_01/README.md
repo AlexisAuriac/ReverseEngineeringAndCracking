@@ -28,5 +28,6 @@ Bruteforcing it disproved that possibility.
 
 ## Solution
 
-https://hashes.com/en/decrypt/hash
+Used an online hash db: https://hashes.com/en/decrypt/hash
+
 flag: flatearthsociety

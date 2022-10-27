@@ -2,8 +2,9 @@
 
 opened with cutter
 
-changed rax to 0 after ptrace call
+changed rax to 0 after ptrace call OR replace ptrace call with ```nop``` instruction.
 
-found lllloworldabcdef in code, it goes through a "compute" function to get the password.
+found "lllloworldabcdef" in code, it goes through a compute() function to get the password.
 
-after compute() call, looked around in heap until found flag
+Skip compute(), go to the strncmp and look at what the password is compared against.\
+flag: "qgqgtrtmq_f]h_ja"

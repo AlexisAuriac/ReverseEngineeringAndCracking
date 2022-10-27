@@ -1,8 +1,8 @@
 # QT_01
 
-decompiled with cutter
+decompiled with cutter.
 
-found flag in dbg.Notepad::save()
+found flag in ```dbg.Notepad::save()```.
 
 ```c++
 // WARNING: Variable defined which should be unmapped: var_8h

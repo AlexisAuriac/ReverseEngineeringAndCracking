@@ -1,10 +1,10 @@
 # ELF_01
 
+The flag can be seen in raw binary file\
 flag: Thiswasreallyeasy
-Can be seen in raw binary file
 
 Decompiled with Cutter:
-```
+```c
 int32_t main (char ** argv, unsigned long argc) {
     rsi = argv;
     rdi = argc;

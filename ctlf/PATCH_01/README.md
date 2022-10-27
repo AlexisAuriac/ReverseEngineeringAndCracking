@@ -18,4 +18,4 @@ Took 7m33s to complete.
 By flipping bit 4 of byte 4284 we get:
 Received message: send_help_pls!
 
-md5: 1db328070f31c4c97c9569122ae2c729
+md5: ```1db328070f31c4c97c9569122ae2c729```
