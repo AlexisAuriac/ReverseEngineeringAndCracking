@@ -1521,4 +1521,45 @@ flag: <code>BFS{5iMp1e_r1gH7? g00d J0b!}</code></p>
 <p><strong>Did not finish</strong></p>
 <h2><a id="user-content-what-it-does-4" class="anchor" aria-hidden="true" href="#what-it-does-4"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it does</h2>
 <p>Success message is 156 bytes long</p>
+<h1><a id="user-content-elf_selfmodify_01" class="anchor" aria-hidden="true" href="#elf_selfmodify_01"><span aria-hidden="true" class="octicon octicon-link"></span></a>ELF_selfmodify_01</h1>
+<h2><a id="user-content-what-it-does-5" class="anchor" aria-hidden="true" href="#what-it-does-5"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it does</h2>
+<p>changes the protection of a part of the program so that it can be written onto (mprotect), this part contains 2 functions with a lot of invalid instructions</p>
+<p>xors this section with 0x42, patching all errors</p>
+<p>checks pwd is 16 bytes long</p>
+<p>checks pwd is lowercase only</p>
+<p>hash pwd with sha256</p>
+<p>compares with: <code>1b1d7478ccdc83c23d897948e110db093459481e1a3b20e5cf85dfe3f69f6804</code></p>
+<h2><a id="user-content-brute-force-bad-solution" class="anchor" aria-hidden="true" href="#brute-force-bad-solution"><span aria-hidden="true" class="octicon octicon-link"></span></a>Brute force (bad solution)</h2>
+<p>There is the a string "flagflagflagflag".</p>
+<p>It doesn't seem to be used but could be a hint that the flag is a 4 byte string repeated for times.</p>
+<p>Only 26^4 possibilities (456,976).</p>
+<p>Bruteforcing it disproved that possibility.</p>
+<p>(See solve/src/main.rs)</p>
+<h2><a id="user-content-solution-6" class="anchor" aria-hidden="true" href="#solution-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution</h2>
+<p>Used an online hash db: <a href="https://hashes.com/en/decrypt/hash" rel="nofollow">https://hashes.com/en/decrypt/hash</a></p>
+<p>flag: flatearthsociety</p>
+<h1><a id="user-content-elf_selfmodify_02" class="anchor" aria-hidden="true" href="#elf_selfmodify_02"><span aria-hidden="true" class="octicon octicon-link"></span></a>ELF_selfmodify_02</h1>
+<h2><a id="user-content-what-it-does-6" class="anchor" aria-hidden="true" href="#what-it-does-6"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it does</h2>
+<p>changes the protection of a part of the program so that it can be written onto (mprotect), this part contains 2 functions with a lot of invalid instructions</p>
+<p>xors this section with <code>0x42</code>, patching all errors</p>
+<p>checks pwd is lowercase only</p>
+<p>it uses ptrace to check if the program is being debugged (see ELF_antiDBG_01)</p>
+<p>uses custom hashing function to unhash <code>!&amp;{!!t$&amp;&amp;p#&amp;t $$ww!v'pr# {ur{qs$!&amp;!# #rztq$u{&amp;{q$#vw{##p'$qt!vqp</code><br>
+It becomes: <code>cd9cc6fdd2ad6bff55c4e20ab970931fcdcaba0863f79d93fa459aa2ef36c432</code></p>
+<p>hash pwd with sha256</p>
+<p>compares pwd with: <code>cd9cc6fdd2ad6bff55c4e20ab970931fcdcaba0863f79d93fa459aa2ef36c432</code></p>
+<h2><a id="user-content-solution-7" class="anchor" aria-hidden="true" href="#solution-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution</h2>
+<p>Used an online hash db: <a href="https://md5decrypt.net/en/Sha256/" rel="nofollow">https://md5decrypt.net/en/Sha256/</a></p>
+<p>flag: bananapower</p>
+<h1><a id="user-content-elf_selfmodify_03" class="anchor" aria-hidden="true" href="#elf_selfmodify_03"><span aria-hidden="true" class="octicon octicon-link"></span></a>ELF_selfmodify_03</h1>
+<h2><a id="user-content-what-it-does-7" class="anchor" aria-hidden="true" href="#what-it-does-7"><span aria-hidden="true" class="octicon octicon-link"></span></a>What it does</h2>
+<p>Modifies itself like ELF_selfmodify_02.</p>
+<p>Uses the SIGTRAP handler method to prevent debugging (see ELF_antiDBG_02).
+More specifically it uses that method to create infinite loops.</p>
+<p>hash pwd with sha256</p>
+<p>compares with: <code>891b3a6e61d3c71afc3190f9a5718f282749b53e3e064299c636587ce60722ce</code></p>
+<h2><a id="user-content-solution-8" class="anchor" aria-hidden="true" href="#solution-8"><span aria-hidden="true" class="octicon octicon-link"></span></a>Solution</h2>
+<p>Skip infinite loops and other anti-debug methods by changing the RIP when needed.</p>
+<p>Used an online hash db: <a href="https://md5decrypt.net/en/Sha256/" rel="nofollow">https://md5decrypt.net/en/Sha256/</a></p>
+<p>flag: LONGTUNEL</p>
 </article></body></html>

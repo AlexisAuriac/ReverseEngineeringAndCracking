@@ -722,3 +722,83 @@ Finds the flag in 2 hours.
 ## What it does
 
 Success message is 156 bytes long
+
+# ELF_selfmodify_01
+
+## What it does
+
+changes the protection of a part of the program so that it can be written onto (mprotect), this part contains 2 functions with a lot of invalid instructions
+
+xors this section with 0x42, patching all errors
+
+checks pwd is 16 bytes long
+
+checks pwd is lowercase only
+
+hash pwd with sha256
+
+compares with: ```1b1d7478ccdc83c23d897948e110db093459481e1a3b20e5cf85dfe3f69f6804```
+
+## Brute force (bad solution)
+
+There is the a string "flagflagflagflag".
+
+It doesn't seem to be used but could be a hint that the flag is a 4 byte string repeated for times.
+
+Only 26^4 possibilities (456,976).
+
+Bruteforcing it disproved that possibility.
+
+(See solve/src/main.rs)
+
+## Solution
+
+Used an online hash db: https://hashes.com/en/decrypt/hash
+
+flag: flatearthsociety
+
+# ELF_selfmodify_02
+
+## What it does
+
+changes the protection of a part of the program so that it can be written onto (mprotect), this part contains 2 functions with a lot of invalid instructions
+
+xors this section with ```0x42```, patching all errors
+
+checks pwd is lowercase only
+
+it uses ptrace to check if the program is being debugged (see ELF_antiDBG_01)
+
+uses custom hashing function to unhash ```!&{!!t$&&p#&t $$ww!v'pr# {ur{qs$!&!# #rztq$u{&{q$#vw{##p'$qt!vqp```\
+It becomes: ```cd9cc6fdd2ad6bff55c4e20ab970931fcdcaba0863f79d93fa459aa2ef36c432```
+
+hash pwd with sha256
+
+compares pwd with: ```cd9cc6fdd2ad6bff55c4e20ab970931fcdcaba0863f79d93fa459aa2ef36c432```
+
+## Solution
+
+Used an online hash db: https://md5decrypt.net/en/Sha256/
+
+flag: bananapower
+
+# ELF_selfmodify_03
+
+## What it does
+
+Modifies itself like ELF_selfmodify_02.
+
+Uses the SIGTRAP handler method to prevent debugging (see ELF_antiDBG_02).
+More specifically it uses that method to create infinite loops.
+
+hash pwd with sha256
+
+compares with: ```891b3a6e61d3c71afc3190f9a5718f282749b53e3e064299c636587ce60722ce```
+
+## Solution
+
+Skip infinite loops and other anti-debug methods by changing the RIP when needed.
+
+Used an online hash db: https://md5decrypt.net/en/Sha256/
+
+flag: LONGTUNEL

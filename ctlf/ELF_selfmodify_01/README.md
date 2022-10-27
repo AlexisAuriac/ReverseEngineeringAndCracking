@@ -12,7 +12,7 @@ checks pwd is lowercase only
 
 hash pwd with sha256
 
-compares with: 1b1d7478ccdc83c23d897948e110db093459481e1a3b20e5cf85dfe3f69f6804
+compares with: ```1b1d7478ccdc83c23d897948e110db093459481e1a3b20e5cf85dfe3f69f6804```
 
 ## Brute force (bad solution)
 
